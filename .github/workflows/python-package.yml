@@ -40,6 +40,7 @@ jobs:
         run: |
           git config --local user.email "gt9697@naver.com"
           git config --local user.name "hyeonseongkang"
+          git add .
           git commit -m "get today menu"
 
       - name: Push
