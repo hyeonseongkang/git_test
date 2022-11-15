@@ -40,15 +40,10 @@ jobs:
         run: |
           git config --local user.email "gt9697@naver.com"
           git config --local user.name "hyeonseongkang"
-          git add today_menu.txt
           git commit -m "get today menu"
 
-      - name: Pull
-        run: |
-          git pull origin main
-
       - name: Push
-        uses: ad-m/github-push-action@main
+        uses: ad-m/github-push-action@master
         with:
-          branch: "main"
-          github_token: $
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
