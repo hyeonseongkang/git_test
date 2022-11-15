@@ -3,9 +3,14 @@ from bs4 import BeautifulSoup
 from datetime import datetime
 
 # 0 - 월, 1 - 화, 2 - 수, 3 - 목, 4 - 금, 5 - 토, 6 - 일
+now = datetime.now()
 today = datetime.today().weekday()
-print(datetime.today())
+if now.hour + 9 >= 24:
+    today += 1
+print(today)
 file = open('today_menu.txt', 'w')    # hello.txt 파일을 쓰기 모드(w)로 열기. 파일 객체 반환
+# 2022-11-15 15:16:17.592236
+# 2022-11-16 00:16:41.817962
 
 webpage = requests.get("https://sobi.jbnu.ac.kr/menu/week_menu.php")
 webpage.encoding = 'UTF-8'
