@@ -3,9 +3,7 @@
 
 name: Today Menu
 
-on:
-  schedule:
-    - cron:  '40 2 * * *'
+on: [push]
 
 jobs:
   build:
