@@ -48,7 +48,7 @@ jobs:
           git pull origin main
 
       - name: Push
-        uses: ad-m/github-push-action@master
+        uses: ad-m/github-push-action@main
         with:
-          branch: "master"
+          branch: "main"
           github_token: $
