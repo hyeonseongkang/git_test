@@ -4,7 +4,7 @@ from datetime import datetime
 
 # 0 - 월, 1 - 화, 2 - 수, 3 - 목, 4 - 금, 5 - 토, 6 - 일
 today = datetime.today().weekday()
-
+print(datetime.today())
 file = open('today_menu.txt', 'w')    # hello.txt 파일을 쓰기 모드(w)로 열기. 파일 객체 반환
 
 webpage = requests.get("https://sobi.jbnu.ac.kr/menu/week_menu.php")
