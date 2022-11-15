@@ -36,6 +36,10 @@ jobs:
         run: |
           python main.py
 
+      - name: Pull
+        run: |
+          git pull origin main
+
       - name: Commits
         run: |
           git config --local user.email "gt9697@naver.com"
@@ -44,7 +48,7 @@ jobs:
           git commit -m "get today menu"
 
       - name: Push
-        uses: ad-m/github-push-action@main
+        uses: ad-m/github-push-action@master
         with:
-          branch: "main"
+          branch: "master"
           github_token: $
