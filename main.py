@@ -33,7 +33,7 @@ for i in range(5):
             
     #print()
     arr.append(save_text)
-
+print(today)
 print(arr[today])
 if today >= 5:
     file.write("오늘은 운영하지 않습니다.")
