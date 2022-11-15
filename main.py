@@ -35,5 +35,8 @@ for i in range(5):
     arr.append(save_text)
 
 print(arr[today])
-file.write(arr[today])      # 파일에 문자열 저장
+if today >= 5:
+    file.write("오늘은 운영하지 않습니다.")
+else:
+    file.write(arr[today])      # 파일에 문자열 저장
 file.close()                # 파일 객체 닫기
