@@ -46,7 +46,7 @@ jobs:
           git commit -m "get today menu"
 
       - name: Push
-        uses: ad-m/github-push-action@master
+        uses: ad-m/github-push-action@develop
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ github.ref }}
